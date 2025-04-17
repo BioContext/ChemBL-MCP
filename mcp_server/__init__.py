@@ -36,11 +36,20 @@ all_tools = {
 }
 
 # Re-export all tool functions for backward compatibility
-from .molecules import search_molecule, get_molecule_details, get_molecule_sdf, get_similar_molecules, search_molecule_substructure
-from .targets import search_targets, get_target_details, get_molecule_targets
-from .assays import search_assays, get_assay_details
-from .activities import get_bioactivities, get_activity_details
-from .documents import get_document_info, get_document_compounds
+from .molecules import search_molecule_impl as search_molecule
+from .molecules import get_molecule_details_impl as get_molecule_details
+from .molecules import get_molecule_sdf_impl as get_molecule_sdf
+from .molecules import get_similar_molecules_impl as get_similar_molecules
+from .molecules import search_molecule_substructure_impl as search_molecule_substructure
+from .targets import search_targets_impl as search_targets
+from .targets import get_target_details_impl as get_target_details
+from .targets import get_molecule_targets_impl as get_molecule_targets
+from .assays import search_assays_impl as search_assays
+from .assays import get_assay_details_impl as get_assay_details
+from .activities import get_bioactivities_impl as get_bioactivities
+from .activities import get_activity_details_impl as get_activity_details
+from .documents import get_document_info_impl as get_document_info
+from .documents import get_document_compounds_impl as get_document_compounds
 
 # Main entry point for running the server directly
 if __name__ == "__main__":

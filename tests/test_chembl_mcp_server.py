@@ -3,7 +3,7 @@ Tests for the ChEMBL MCP server implementation.
 """
 
 import pytest
-from chembl_mcp_server import (
+from mcp_server import (
     search_molecule,
     get_molecule_targets,
     get_molecule_details,
